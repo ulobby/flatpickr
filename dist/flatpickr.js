@@ -553,7 +553,7 @@ function FlatpickrInstance(element, instanceConfig) {
             bind(self.timeContainer, "mousedown", onClick(timeIncrement));
             bind(self.timeContainer, ["wheel", "increment"], self._debouncedChange);
             bind(self.timeContainer, "input", triggerChange);
-            bind([self.hourElement, self.minuteElement], "focus", selText);
+            bind([self.hourElement, self.minuteElement], selText);
             if (self.secondElement !== undefined)
                 bind(self.secondElement, "focus", function () { return self.secondElement && self.secondElement.select(); });
             if (self.amPM !== undefined) {
